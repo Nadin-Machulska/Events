@@ -13,6 +13,8 @@ document.body.addEventListener("keydown", (event) => {
         div.replaceWith(textarea);
         textarea.textContent = mainText;
         textarea.setAttribute('contenteditable', 'true')
+        textarea.innerText = mainText;
+        newDiv.replaceWith(textarea);
         console.log(text)
     }
 
@@ -29,86 +31,97 @@ document.body.addEventListener("keydown", (event) => {
 
 
 const books = [
-     {
-        nameOfBook: "Pride and Prejudice",
-        author: "Jane Austin",
-        dateofRelease: 1813,
+    {
+         name: 'name',
+         value: [
+            "Pride and Prejudice",
+            "The Great Gatsby",
+            "Jane Eyre",
+            "The Master and Margarita",
+            "The Catcher in the Rye",
+            "Anna Karenina", 
+            "Perfume",
+            "A Christmas Carol",
+            "Little Women",
+
+        ]
+       
     },
 
     {
-        nameOfBook: "The Great Gatsby",
-        author: "F. Scott Fitzgerald",
-        dateofRelease: 1925,
+        name: 'author',
+        value: ["Jane Austin",
+        "F. Scott Fitzgerald",
+        "Charlotte Bronte",
+        "Mykhail Bulgakov",
+        "J.D. Salinger",
+        "Leo Tolstoy",
+        "Patrick Süskind",
+        "Charles Dickens",
+        "Louisa May Alcott",
+        ] ,
     },
 
     {
-        nameOfBook: "Jane Eyre",
-        author: "Charlotte Bronte",
-        dateofRelease: 1847,
+        name: 'publicated',
+        value: [1813,
+            1925,
+            1847,
+            1966,
+            1951,
+            1878,
+            1985,
+            1843,
+            1868,
+        ]
     },
 
-    {
-        nameOfBook: "The Master and Margarita",
-        author: "Mykhail Bulgakov",
-        dateofRelease: 1966,
-    },
-
-    {
-        nameOfBook: "The Catcher in the Rye",
-        author: "J.D. Salinger",
-        dateofRelease: 1951,
-    },
-
-    {
-        nameOfBook: "Anna Karenina",
-        author: "Leo Tolstoy",
-        dateofRelease: 1878
-    },
-
-    {
-        nameOfBook: "Perfume",
-        author: "Patrick Süskind",
-        dateofRelease: 1985,
-    },
-
-    {
-        nameOfBook: "A Christmas Carol",
-        author: "Charles Dickens",
-        dateofRelease: 1843,
-    },
-
-    {
-        nameOfBook: "Little Women",
-        author: "Louisa May Alcott",
-        dateofRelease: 1868,
-    },
 ]
 
-const container = document.querySelector('.table');
+const tableAll = document.querySelector('.table');
 const tableBody = document.querySelector('.table-body');
 const tableHead = document.querySelector('.table-head');
 
 
-createTable();
+// createTable();
 
-function createTable(){
+// function createTable(){
 
-    let tableContent = '';
+//     let tableContent = '';
 
-    for (let i = 0; i <= books.length; i++){
-        tableContent += `
-            <tr>
-            <td>${books[i].nameOfBook}</td>
-            <td>${books[i].author}</td>
-            <td>${books[i].dateofRelease}</td>
-            </tr>
-        `
+//     for (let i = 0; i <= books.length; i++){
+//         tableContent += `
+//             <tr>
+//             <td>${books[i].value[i]}</td>
+//             <td>${books[i].value[i]}</td>
+//             <td>${books[i].value[i]}</td>
+//             </tr>
+//         `
         
-        tableBody.innerHTML = tableContent;
-    }
+//         tableBody.innerHTML = tableContent;
+//     }
 
-    // return tableContent;
-}
+// }
+
+// for (const table of tableAll) {
+//     const tBody = table.tBodies[0];
+//     const rows = Array.from(tBody.rows);
+//     const headerCells = table.tHead.rows[0].cells;
+
+//     for (const th of headerCells) {
+//         const cellIndex = th.cellIndex;
+
+//         th.addEventListener('click', () => {
+//             rows.sort((tr1, tr2) => {
+//                 const tr1Text = tr1.cells[cellIndex].textContent;
+//                 const tr2Text = tr2.cells[cellIndex].textContent;
+//                 return tr1Text.localeCompare(tr2Text);
+//             });
+
+//             tBody.append(...rows);
+//         });
+//     }
+// }
 
 // const th = document.getElementsByTagName('th');
 
