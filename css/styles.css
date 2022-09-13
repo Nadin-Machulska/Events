@@ -1,0 +1,106 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+.wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  border: none;
+}
+
+.text {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+label,
+textarea {
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+
+textarea {
+  padding: 10px;
+  max-width: 100%;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #999;
+  width: 1000px;
+  height: 500px;
+  margin: 0 auto;
+  font-family: "Montserrat";
+}
+
+div {
+  padding: 10px;
+  max-width: 100%;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #999;
+  font-size: 20px;
+  font-family: "Montserrat";
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-family: "Montserrat";
+  text-align: center;
+}
+
+.main__info {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.changed__text {
+  width: 400px;
+  height: 500px;
+  display: inline-block;
+  font-family: "Montserrat";
+}
+
+.table {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.table table {
+  margin: 0 auto;
+  padding: 10px;
+}
+.table table col {
+  display: table-column;
+}
+.table table th {
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px 20px;
+  border: 2px solid pink;
+  width: 180px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.5);
+}
+.table table td {
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px 20px;
+  border: 2px solid pink;
+  width: 180px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.5);
+}
+.table table tr {
+  border: 1px solid black;
+}
+.table table .table-sortable th {
+  cursor: pointer;
+}
+.table table .table-sortable .th-sort-asc::after {
+  content: "/25b4";
+}
+.table table .table-sortable .th-sort-desc::after {
+  content: "/25be";
+}/*# sourceMappingURL=styles.css.map */
